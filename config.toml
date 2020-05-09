@@ -1,0 +1,5 @@
+baseURL = "https://lwbing.top/"
+languageCode = "zh"
+DefaultContentLanguage = "zh"
+title = "Clown博客"
+theme = "ananke"
