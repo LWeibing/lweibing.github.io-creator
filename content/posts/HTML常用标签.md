@@ -59,7 +59,7 @@ Hit CTRL-C to stop the server
 ```
 
 伪协议
-* javascript:代码. 当单击是执行代码,如果为空,这什么事情也不发生
+* javascript:代码. 当单击是执行代码,如果为空,则什么事情也不发生
 * mailto:邮箱. 可以发送邮件
 * tel:电话. 可以拨打电话
 
@@ -79,10 +79,11 @@ id
 其他
 * 当 `href` 为空值时,点击将会刷新页面;
 
-    <a href="">会刷新页面的a</a>
+        <a href="">会刷新页面的a</a>
 
 * 当 `href` 为 `#` 时,点击将会将页面拉到最顶上;
-
+        
+        <a href="#">会刷新页面的a</a>
 
 #### 2.target的取值
 
@@ -96,32 +97,36 @@ id
         <a href="//baidu.com" target="_parent">当前页面打开百度</a>
   
 * _top:在上一层的页面中打开
-
+    ```
+        //这是 index.html 文件
         <iframe src="iframe-target.html" frameborder="0" name="yyy"></iframe>
 
-        在 iframe-target.html 文件中
-        <a href="//baidu.com" target="_top">在顶部打开百度</a>
+        //这是 iframe-target.html 文件
+        <a href="//baidu.com" target="_top">在 index.html 页面打开百度页面</a>
+    ```
 
 * _self:自己打开页面
-
+    ```
+        //这是 index.html 文件
         <iframe src="iframe-target.html" frameborder="0" name="yyy"></iframe>
 
-        //在 iframe-target.html 文件中
-        <a href="//baidu.com" target="_self">自己打开百度</a>
+        //这是 iframe-target.html 文件
+        <a href="//baidu.com" target="_self">在 iframe-target.html 页面打开百度</a>
+    ```
 
 程序员命名
 
 * window的name
-
+    ```
         //没有xxx页面,则新建xxx页面打开,否则在xxx页面打开
         <a href="//baidu.com" target="xxx">用xxx打开百度</a>
         <a href="//google.com" target="xxx">用xxx打开谷歌</a>
-
+    ```
 * iframe的name
-  
+    ```
         <iframe src="iframe-target.html" frameborder="0" name="yyy"></iframe>
         <a href="//baidu.com" target="yyy">用xxx打开百度</a>
-    
+    ```
 #### 3. download
 
 作用:下载超链接目标
